@@ -16,6 +16,10 @@ body{
     height: 5vh;
     background-color: transparent;
     animation: animate 0.75s ease-in-out forwards;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .block:nth-child(even){
@@ -31,21 +35,16 @@ body{
 @keyframes animate {
     0%{
         opacity: 0;
-        transform: translateY(1000px) scale(0);
+        transform: translateY(0) scale(0);
     }
     50%{
         opacity: 1;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        transform: translateY(300px) scale(.5);
         background-image: url('./myPhoto.jpg');
     }
     100%{
         opacity: 1;
         transform: translateY(0px) scale(1);
-        background-attachment: fixed;
-        background-position: center;
         background-image: url('./myPhoto.jpg');
     }
 }

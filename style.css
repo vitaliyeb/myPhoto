@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #302f30;;
+}
+.block{
+    width: 5vw;
+    height: 5vh;
+    background-color: transparent;
+    animation: animate 0.75s ease-in-out forwards;
+}
+
+.block:nth-child(even){
+    animation-duration: 1s;
+}
+.block:nth-child(7n+3){
+    animation-duration: 2.5s;
+}
+.block:nth-child(7n+7){
+    animation-duration: 3.5s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: translateY(1000px) scale(0);
+    }
+    50%{
+        opacity: 1;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url('./myPhoto.jpg');
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url('./myPhoto.jpg');
+    }
+}

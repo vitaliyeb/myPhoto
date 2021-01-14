@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my photo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let blocks = document.getElementsByTagName('div');
+        for(let i = 0; i < 400; i++){
+            document.body.innerHTML += '<div class="block"></div>';
+            blocks[i].style.animationDelay = i * 0.05 + 's';
+        }
+    </script>
+</body>
+</html>
